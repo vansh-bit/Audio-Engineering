@@ -1,0 +1,224 @@
+{
+  "dataset_name": "Indian Speech Controlled Mixture Evaluation Suite (Track A)",
+  "sample_rate_hz": 16000,
+  "format": "16-bit Mono PCM WAV",
+  "total_mixtures": 6,
+  "mixtures": [
+    {
+      "mixture_id": "controlled_mix_01_pairAD_ov25_sir0",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 9.536,
+      "overlap_ratio_target": 0.25,
+      "overlap_duration_seconds": 1.179,
+      "sir_target_db": 0.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 9.536,
+        "peak_amplitude": 0.907,
+        "peak_db": -0.85,
+        "rms_energy_db": -17.25,
+        "snr_estimate_db": 42.33
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_A_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 4.715,
+          "duration_seconds": 4.715,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_01_pairAD_ov25_sir0_gt_SPEAKER_MALE_HINGLISH.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_HINDI",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_D_female_hindi.wav",
+          "start_time_seconds": 3.536,
+          "end_time_seconds": 9.536,
+          "duration_seconds": 6.0,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_01_pairAD_ov25_sir0_gt_SPEAKER_FEMALE_HINDI.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_01_pairAD_ov25_sir0.wav",
+      "description": "Male Hinglish + Female Hindi at 25% overlap, equal volume (natural interjection)"
+    },
+    {
+      "mixture_id": "controlled_mix_02_pairAD_ov50_sir0",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 8.357,
+      "overlap_ratio_target": 0.5,
+      "overlap_duration_seconds": 2.357,
+      "sir_target_db": 0.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 8.357,
+        "peak_amplitude": 0.907,
+        "peak_db": -0.85,
+        "rms_energy_db": -16.7,
+        "snr_estimate_db": 35.42
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_A_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 4.715,
+          "duration_seconds": 4.715,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_02_pairAD_ov50_sir0_gt_SPEAKER_MALE_HINGLISH.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_HINDI",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_D_female_hindi.wav",
+          "start_time_seconds": 2.357,
+          "end_time_seconds": 8.357,
+          "duration_seconds": 6.0,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_02_pairAD_ov50_sir0_gt_SPEAKER_FEMALE_HINDI.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_02_pairAD_ov50_sir0.wav",
+      "description": "Male Hinglish + Female Hindi at 50% overlap, equal volume (conversational overlap)"
+    },
+    {
+      "mixture_id": "controlled_mix_03_pairAD_ov50_sir6",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 8.357,
+      "overlap_ratio_target": 0.5,
+      "overlap_duration_seconds": 2.357,
+      "sir_target_db": 6.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 8.357,
+        "peak_amplitude": 0.907,
+        "peak_db": -0.85,
+        "rms_energy_db": -19.06,
+        "snr_estimate_db": 37.72
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_A_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 4.715,
+          "duration_seconds": 4.715,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_03_pairAD_ov50_sir6_gt_SPEAKER_MALE_HINGLISH.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_HINDI",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_D_female_hindi.wav",
+          "start_time_seconds": 2.357,
+          "end_time_seconds": 8.357,
+          "duration_seconds": 6.0,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_03_pairAD_ov50_sir6_gt_SPEAKER_FEMALE_HINDI.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_03_pairAD_ov50_sir6.wav",
+      "description": "Male Hinglish + Female Hindi at 50% overlap, +6dB SIR (Male dominant talker)"
+    },
+    {
+      "mixture_id": "controlled_mix_04_pairBC_ov25_sir0",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 9.157,
+      "overlap_ratio_target": 0.25,
+      "overlap_duration_seconds": 0.848,
+      "sir_target_db": 0.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 9.157,
+        "peak_amplitude": 0.9295,
+        "peak_db": -0.63,
+        "rms_energy_db": -19.63,
+        "snr_estimate_db": 45.44
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH_2",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_B_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 6.613,
+          "duration_seconds": 6.613,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_04_pairBC_ov25_sir0_gt_SPEAKER_MALE_HINGLISH_2.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_INDIC",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_C_female_indic.wav",
+          "start_time_seconds": 5.765,
+          "end_time_seconds": 9.157,
+          "duration_seconds": 3.392,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_04_pairBC_ov25_sir0_gt_SPEAKER_FEMALE_INDIC.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_04_pairBC_ov25_sir0.wav",
+      "description": "Male Hinglish 2 + Female Indic at 25% overlap, equal volume"
+    },
+    {
+      "mixture_id": "controlled_mix_05_pairBC_ov50_sir0",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 8.309,
+      "overlap_ratio_target": 0.5,
+      "overlap_duration_seconds": 1.696,
+      "sir_target_db": 0.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 8.309,
+        "peak_amplitude": 0.9292,
+        "peak_db": -0.64,
+        "rms_energy_db": -19.19,
+        "snr_estimate_db": 45.77
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH_2",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_B_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 6.613,
+          "duration_seconds": 6.613,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_05_pairBC_ov50_sir0_gt_SPEAKER_MALE_HINGLISH_2.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_INDIC",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_C_female_indic.wav",
+          "start_time_seconds": 4.917,
+          "end_time_seconds": 8.309,
+          "duration_seconds": 3.392,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_05_pairBC_ov50_sir0_gt_SPEAKER_FEMALE_INDIC.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_05_pairBC_ov50_sir0.wav",
+      "description": "Male Hinglish 2 + Female Indic at 50% overlap, equal volume"
+    },
+    {
+      "mixture_id": "controlled_mix_06_pairBC_ov50_sir_neg6",
+      "sample_rate_hz": 16000,
+      "total_duration_seconds": 8.309,
+      "overlap_ratio_target": 0.5,
+      "overlap_duration_seconds": 1.696,
+      "sir_target_db": -6.0,
+      "snr_noise_db": null,
+      "acoustic_metrics": {
+        "duration_seconds": 8.309,
+        "peak_amplitude": 0.95,
+        "peak_db": -0.45,
+        "rms_energy_db": -18.9,
+        "snr_estimate_db": 49.97
+      },
+      "sources": [
+        {
+          "speaker_id": "SPEAKER_MALE_HINGLISH_2",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_B_male_hinglish.wav",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 6.613,
+          "duration_seconds": 6.613,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_06_pairBC_ov50_sir_neg6_gt_SPEAKER_MALE_HINGLISH_2.wav"
+        },
+        {
+          "speaker_id": "SPEAKER_FEMALE_INDIC",
+          "original_stem_path": "data/controlled_eval_suite/clean_sources/speaker_C_female_indic.wav",
+          "start_time_seconds": 4.917,
+          "end_time_seconds": 8.309,
+          "duration_seconds": 3.392,
+          "aligned_ground_truth_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_06_pairBC_ov50_sir_neg6_gt_SPEAKER_FEMALE_INDIC.wav"
+        }
+      ],
+      "mixture_file_path": "data/controlled_eval_suite/synthetic_mixtures/controlled_mix_06_pairBC_ov50_sir_neg6.wav",
+      "description": "Male Hinglish 2 + Female Indic at 50% overlap, -6dB SIR (Female dominant talker)"
+    }
+  ]
+}
