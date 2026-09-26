@@ -1,0 +1,49 @@
+# ==============================================================================
+# Git Ignore Configuration - Indian Speech Engineering Project
+# ==============================================================================
+
+# --- Operating System & IDE Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Python & Bytecode Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# --- Virtual Environments ---
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# --- Temporary & Scratch Test Artifacts ---
+outputs/runs/
+scratch/
+tmp/
+temp/
+*.tmp
+*.log
+
+# --- Internal Developer Notes & Checklists (Not for Evaluation) ---
+project_milestones/12_RESUME_AND_INTERVIEW_VALUE.md
+project_milestones/REVIEW_BEFORE_IMPLEMENTATION.md
+project_milestones/FIRST_EVALUATION_CHECKLIST.md
+outputs/reports/m0_environment_report.md
