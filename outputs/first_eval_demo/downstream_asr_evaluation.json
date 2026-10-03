@@ -1,0 +1,63 @@
+{
+  "experiment": "Downstream Speech-to-Text Transcription & Word Error Rate Evaluation",
+  "timestamp": "2026-10-03 17:17:32",
+  "asr_architecture": "openai/whisper-tiny",
+  "device": "mps",
+  "test_mixture_id": "controlled_mix_01_pairAD_ov25_sir0",
+  "unseparated_mixture": {
+    "transcript_raw": "पुप्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प",
+    "transcript_normalized": "पुप्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प्प",
+    "wer_against_speaker_0": {
+      "wer": 1.0,
+      "wer_percent": 100.0,
+      "substitutions": 1,
+      "deletions": 14,
+      "insertions": 0,
+      "ref_words": 15,
+      "hyp_words": 1
+    },
+    "wer_against_speaker_1": {
+      "wer": 1.0,
+      "wer_percent": 100.0,
+      "substitutions": 1,
+      "deletions": 16,
+      "insertions": 0,
+      "ref_words": 17,
+      "hyp_words": 1
+    },
+    "mean_wer_percent": 100.0,
+    "asr_failure_mode": "autoregressive_attention_repetition_loop"
+  },
+  "separated_stems": {
+    "speaker_0": {
+      "stem_file": "/Users/vanshsharma/Documents/AI Project/outputs/first_eval_demo/conv_tasnet/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_speaker_0.wav",
+      "transcript_raw": "Und he does then to create hub karna hoga and us kebad, un ka fitneptesliya jaiga.",
+      "transcript_normalized": "und he does then to create hub karna hoga and us kebad un ka fitneptesliya jaiga",
+      "wer_metrics": {
+        "wer": 1.0667,
+        "wer_percent": 106.67,
+        "substitutions": 15,
+        "deletions": 0,
+        "insertions": 1,
+        "ref_words": 15,
+        "hyp_words": 16
+      }
+    },
+    "speaker_1": {
+      "stem_file": "/Users/vanshsharma/Documents/AI Project/outputs/first_eval_demo/conv_tasnet/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_speaker_1.wav",
+      "transcript_raw": "1 voice audio data set, which is the opu of artificial intelligence AIK,",
+      "transcript_normalized": "1 voice audio data set which is the opu of artificial intelligence aik",
+      "wer_metrics": {
+        "wer": 1.0,
+        "wer_percent": 100.0,
+        "substitutions": 13,
+        "deletions": 4,
+        "insertions": 0,
+        "ref_words": 17,
+        "hyp_words": 13
+      }
+    },
+    "mean_wer_percent": 103.34
+  },
+  "absolute_wer_reduction_percent": -3.34
+}
