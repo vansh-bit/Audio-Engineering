@@ -46,10 +46,10 @@
 >
 > *(Play or point to Audio Demo: `controlled_mix_01`)*
 >
-> *Here is the **original mixture**: a male Hinglish speaker talking about fitness tests while a female Hindi speaker overlaps concurrently. In the raw mixture, the voices are acoustically entangled.*
+> *Here is the **original mixture**: a female Hinglish speaker talking about fitness tests while a male Hindi speaker overlaps concurrently. In the raw mixture, the voices are acoustically entangled.*
 >
-> *Here is our **separated output channel 0**: the male Hinglish voice, fully isolated.*  
-> *And here is our **separated output channel 1**: the female Hindi voice, with the cross-talk completely suppressed.*
+> *Here is our **separated output channel 0**: the female Hinglish voice, fully isolated.*  
+> *And here is our **separated output channel 1**: the male Hindi voice, with the cross-talk completely suppressed.*
 >
 > *As you can see in our spectrogram analysis on the slide, the overlapping harmonic formants have been cleanly disentangled."*
 

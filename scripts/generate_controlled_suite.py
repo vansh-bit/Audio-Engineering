@@ -13,10 +13,10 @@ def main():
     output_dir = Path("data/controlled_eval_suite/synthetic_mixtures")
     manifest_path = Path("data/manifests/controlled_ground_truth.json")
 
-    stem_a = clean_dir / "speaker_A_male_hinglish.wav"
+    stem_a = clean_dir / "speaker_A_female_hinglish.wav"
     stem_b = clean_dir / "speaker_B_male_hinglish.wav"
     stem_c = clean_dir / "speaker_C_female_indic.wav"
-    stem_d = clean_dir / "speaker_D_female_hindi.wav"
+    stem_d = clean_dir / "speaker_D_male_hindi.wav"
 
     assert stem_a.exists(), f"Missing {stem_a}"
     assert stem_b.exists(), f"Missing {stem_b}"
@@ -27,16 +27,16 @@ def main():
 
     # Define experimental conditions for Phase A First Evaluation
     conditions = [
-        # Pair 1: Male Hinglish + Female Hindi
+        # Pair 1: Female Hinglish + Male Hindi
         {
             "stem_a": stem_a,
             "stem_b": stem_d,
             "overlap": 0.25,
             "sir": 0.0,
             "id": "controlled_mix_01_pairAD_ov25_sir0",
-            "spk_a": "SPEAKER_MALE_HINGLISH",
-            "spk_b": "SPEAKER_FEMALE_HINDI",
-            "description": "Male Hinglish + Female Hindi at 25% overlap, equal volume (natural interjection)",
+            "spk_a": "SPEAKER_FEMALE_HINGLISH",
+            "spk_b": "SPEAKER_MALE_HINDI",
+            "description": "Female Hinglish + Male Hindi at 25% overlap, equal volume (natural interjection)",
         },
         {
             "stem_a": stem_a,
@@ -44,9 +44,9 @@ def main():
             "overlap": 0.50,
             "sir": 0.0,
             "id": "controlled_mix_02_pairAD_ov50_sir0",
-            "spk_a": "SPEAKER_MALE_HINGLISH",
-            "spk_b": "SPEAKER_FEMALE_HINDI",
-            "description": "Male Hinglish + Female Hindi at 50% overlap, equal volume (conversational overlap)",
+            "spk_a": "SPEAKER_FEMALE_HINGLISH",
+            "spk_b": "SPEAKER_MALE_HINDI",
+            "description": "Female Hinglish + Male Hindi at 50% overlap, equal volume (conversational overlap)",
         },
         {
             "stem_a": stem_a,
@@ -54,9 +54,9 @@ def main():
             "overlap": 0.50,
             "sir": 6.0,
             "id": "controlled_mix_03_pairAD_ov50_sir6",
-            "spk_a": "SPEAKER_MALE_HINGLISH",
-            "spk_b": "SPEAKER_FEMALE_HINDI",
-            "description": "Male Hinglish + Female Hindi at 50% overlap, +6dB SIR (Male dominant talker)",
+            "spk_a": "SPEAKER_FEMALE_HINGLISH",
+            "spk_b": "SPEAKER_MALE_HINDI",
+            "description": "Female Hinglish + Male Hindi at 50% overlap, +6dB SIR (Female dominant talker)",
         },
         # Pair 2: Male Hinglish + Female Indic
         {

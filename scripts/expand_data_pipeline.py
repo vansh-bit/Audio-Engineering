@@ -42,10 +42,10 @@ def main():
     # --------------------------------------------------------------------------
     print("\n--- Step 1: Auditing Clean Single-Speaker Stems ---")
     stems = {
-        "speaker_A_male_hinglish": clean_dir / "speaker_A_male_hinglish.wav",
+        "speaker_A_female_hinglish": clean_dir / "speaker_A_female_hinglish.wav",
         "speaker_B_male_hinglish": clean_dir / "speaker_B_male_hinglish.wav",
         "speaker_C_female_indic": clean_dir / "speaker_C_female_indic.wav",
-        "speaker_D_female_hindi": clean_dir / "speaker_D_female_hindi.wav",
+        "speaker_D_male_hindi": clean_dir / "speaker_D_male_hindi.wav",
         "speaker_E_male_hinglish": clean_dir / "speaker_E_male_hinglish.wav",
         "speaker_F_female_hindi": clean_dir / "speaker_F_female_hindi.wav",
         "speaker_G_female_hinglish": clean_dir / "speaker_G_female_hinglish.wav",
@@ -72,34 +72,34 @@ def main():
     else:
         mixtures_list = []
 
-    # Condition 7: 75% Severe Overlap Stress-Test (Male A + Male E)
-    print("  Synthesizing Condition 7: 75% Overlap Stress-Test (Male A + Male E)...")
+    # Condition 7: 75% Severe Overlap Stress-Test (Female A + Male E)
+    print("  Synthesizing Condition 7: 75% Overlap Stress-Test (Female A + Male E)...")
     mix_07 = mix_gen.mix_pair(
-        stem_a_path=stems["speaker_A_male_hinglish"],
+        stem_a_path=stems["speaker_A_female_hinglish"],
         stem_b_path=stems["speaker_E_male_hinglish"],
         overlap_ratio=0.75,
         sir_db=0.0,
         output_dir=synthetic_dir,
         mixture_id="controlled_mix_07_pairAE_ov75_sir0",
-        speaker_a_id="SPEAKER_MALE_HINGLISH_A",
+        speaker_a_id="SPEAKER_FEMALE_HINGLISH_A",
         speaker_b_id="SPEAKER_MALE_HINGLISH_E",
     )
-    mix_07["description"] = "Male A + Male E at 75% severe overlap, equal volume (stress-test condition)"
+    mix_07["description"] = "Female A + Male E at 75% severe overlap, equal volume (stress-test condition)"
     mixtures_list.append(mix_07)
 
-    # Condition 8: 3-Speaker Panel Discussion (Male A + Female D + Female F)
-    print("  Synthesizing Condition 8: 3-Speaker Conversational Panel (Male A + Female D + Female F)...")
+    # Condition 8: 3-Speaker Panel Discussion (Female A + Male D + Female F)
+    print("  Synthesizing Condition 8: 3-Speaker Conversational Panel (Female A + Male D + Female F)...")
     mix_08 = mix_gen.mix_multi_speaker(
         speakers=[
             {
-                "stem_path": stems["speaker_A_male_hinglish"],
-                "speaker_id": "SPEAKER_MALE_HINGLISH_A",
+                "stem_path": stems["speaker_A_female_hinglish"],
+                "speaker_id": "SPEAKER_FEMALE_HINGLISH_A",
                 "start_offset_sec": 0.0,
                 "gain_db": 0.0,
             },
             {
-                "stem_path": stems["speaker_D_female_hindi"],
-                "speaker_id": "SPEAKER_FEMALE_HINDI_D",
+                "stem_path": stems["speaker_D_male_hindi"],
+                "speaker_id": "SPEAKER_MALE_HINDI_D",
                 "start_offset_sec": 3.5,
                 "gain_db": 0.0,
             },
@@ -112,7 +112,7 @@ def main():
         ],
         mixture_id="controlled_mix_08_trioADF_panel",
         output_dir=synthetic_dir,
-        description="3-Speaker Panel: Male A introduces topic, Female D responds with 1.2s overlap, Female F interjects with 2.0s overlap",
+        description="3-Speaker Panel: Female A introduces topic, Male D responds with 1.2s overlap, Female F interjects with 2.0s overlap",
     )
     mixtures_list.append(mix_08)
 
@@ -154,7 +154,7 @@ def main():
 
     # Vignette 1: AIR Formal Studio News Broadcast Baseline (Single Speaker, Clean)
     # Reconstruct pristine studio newsreader clip
-    wav_d, _ = load_audio(stems["speaker_D_female_hindi"], target_sr=16000, to_mono=True)
+    wav_d, _ = load_audio(stems["speaker_D_male_hindi"], target_sr=16000, to_mono=True)
     wav_news = preprocessor.normalize_loudness(wav_d, target_rms_db=-18.0)
     file_news = real_world_dir / "air_formal_news_01.wav"
     save_audio(file_news, wav_news, sample_rate=16000)
@@ -183,7 +183,7 @@ def main():
 
     # Vignette 2: AIR Spontaneous Multi-Speaker Panel Discussion (3 Speakers, Overlap, Hinglish)
     # Host introduces, Guest 1 answers, Guest 2 interjects with overlap
-    wav_a, _ = load_audio(stems["speaker_A_male_hinglish"], target_sr=16000, to_mono=True)
+    wav_a, _ = load_audio(stems["speaker_A_female_hinglish"], target_sr=16000, to_mono=True)
     wav_f, _ = load_audio(stems["speaker_F_female_hindi"], target_sr=16000, to_mono=True)
     wav_g, _ = load_audio(stems["speaker_G_female_hinglish"], target_sr=16000, to_mono=True)
 

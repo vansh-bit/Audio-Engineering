@@ -88,11 +88,11 @@ Evaluated on Apple Silicon Metal GPU (`mps:0`):
 ---
 
 ### 4. Working Demonstration (Audio & Spectrogram Proof)
-* **Sample**: `controlled_mix_01` (9.5s, 25% overlap, Male Hinglish + Female Hindi).
+* **Sample**: `controlled_mix_01` (9.5s, 25% overlap, Female Hinglish + Male Hindi).
 * **Demonstration Audio Artifacts**:
   1. *Original Mixture*: Overlapping concurrent speech where neither speaker is cleanly separable.
-  2. *Separated Speaker 0 (Male Hinglish)*: **21.8 dB SI-SDR**, SNR **61.9 dB** (clean enunciation).
-  3. *Separated Speaker 1 (Female Hindi)*: **21.8 dB SI-SDR**, SNR **67.8 dB** (cross-talk eliminated).
+  2. *Separated Speaker 0 (Female Hinglish)*: **21.8 dB SI-SDR**, SNR **61.9 dB** (clean enunciation).
+  3. *Separated Speaker 1 (Male Hindi)*: **21.8 dB SI-SDR**, SNR **67.8 dB** (cross-talk eliminated).
 * **Visual Verification**: Spectrogram analysis (`outputs/first_eval_demo/spectrogram_comparison.png`) confirms complete elimination of cross-speaker formant interference.
 
 ---

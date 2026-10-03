@@ -70,10 +70,10 @@ In speech engineering, you cannot evaluate models without understanding your dat
 * **The Fundamental Challenge**: Real-world radio broadcasts (like All India Radio) only give you the combined audio mixture. **You do NOT have isolated microphone tracks for each speaker.** Without clean reference tracks, it is mathematically impossible to calculate **SI-SDR** because you cannot measure the error against an unknown target!
 * **Our Solution**: We curate pristine, human single-speaker audio stems and synthetically combine them using our custom engine (`src/preprocessing/mixture_generator.py`) with calibrated overlap and volume ratios.
 * **Clean Source Stems**:
-  1. `speaker_A_male_hinglish.wav` (4.72s, Male Hinglish from Hugging Face `nameissakthi/hindi-english-bilingual`).
+  1. `speaker_A_female_hinglish.wav` (4.72s, Female Hinglish from Hugging Face `nameissakthi/hindi-english-bilingual`).
   2. `speaker_B_male_hinglish.wav` (6.61s, Male Hinglish from Hugging Face `nameissakthi/hindi-english-bilingual`).
   3. `speaker_C_female_indic.wav` (3.39s, Female Indian-accented English).
-  4. `speaker_D_female_hindi.wav` (6.00s, Female Native Hindi from Hugging Face `Speech-data/Hindi-Speech-Dataset`).
+  4. `speaker_D_male_hindi.wav` (6.00s, Male Native Hindi from Hugging Face `Speech-data/Hindi-Speech-Dataset`).
   5. `speaker_E_male_hinglish.wav` (8.30s, Male Hinglish code-switching).
   6. `speaker_F_female_hindi.wav` (4.63s, Female Hindi speech).
   7. `speaker_G_female_hinglish.wav` (5.72s, Female Hinglish code-switching).
@@ -92,18 +92,18 @@ We evaluated the models across 6 controlled conditions (saving 18 `.wav` files t
 
 | Mixture ID | Speaker Pair | Overlap Ratio ($\Omega$) | Overlap Duration | Signal-to-Interference Ratio ($\text{SIR}$) | Acoustic Rationale |
 |---|---|---|---|---|---|
-| `controlled_mix_01` | Male A + Female D | **25%** | 1.18 s | **0 dB** (Equal volume) | Natural conversational interjection |
-| `controlled_mix_02` | Male A + Female D | **50%** | 2.36 s | **0 dB** (Equal volume) | Heavy conversational cross-talk |
-| `controlled_mix_03` | Male A + Female D | **50%** | 2.36 s | **+6 dB** (Male louder) | Dominant foreground speaker vs. background interjection |
+| `controlled_mix_01` | Female A + Male D | **25%** | 1.18 s | **0 dB** (Equal volume) | Natural conversational interjection |
+| `controlled_mix_02` | Female A + Male D | **50%** | 2.36 s | **0 dB** (Equal volume) | Heavy conversational cross-talk |
+| `controlled_mix_03` | Female A + Male D | **50%** | 2.36 s | **+6 dB** (Female louder) | Dominant foreground speaker vs. background interjection |
 | `controlled_mix_04` | Male B + Female C | **25%** | 0.85 s | **0 dB** (Equal volume) | Hinglish male + Indian English female natural turn |
 | `controlled_mix_05` | Male B + Female C | **50%** | 1.70 s | **0 dB** (Equal volume) | Bilingual cross-talk overlap |
 | `controlled_mix_06` | Male B + Female C | **50%** | 1.70 s | **-6 dB** (Female louder) | Female dominant speaker (-6 dB SIR) |
 
 #### Understanding the Timeline of `controlled_mix_01`
 Why does `controlled_mix_01` sound like one person at the beginning?
-* **0.0s – 3.5s**: Male Speaker A speaks alone (*"उन्हें दस दिन तक rehab..."*). Female is silent.
-* **3.5s – 4.7s**: **THE OVERLAP REGION (1.18 seconds)**. Both Male A (*"...fitness test liya jayega"*) and Female D (*"यह एक वॉइस ऑडियो..."*) speak **simultaneously** at equal volume ($0\text{ dB SIR}$).
-* **4.7s – 9.5s**: Female Speaker D finishes her thought alone.
+* **0.0s – 3.5s**: Female Speaker A speaks alone (*"उन्हें दस दिन तक rehab..."*). Male is silent.
+* **3.5s – 4.7s**: **THE OVERLAP REGION (1.18 seconds)**. Both Female A (*"...fitness test liya jayega"*) and Male D (*"यह एक वॉइस ऑडियो..."*) speak **simultaneously** at equal volume ($0\text{ dB SIR}$).
+* **4.7s – 9.5s**: Male Speaker D finishes his thought alone.
 * In natural conversation, people don't talk at the exact same start second; one person chimes in toward the end of another's sentence. That is what a **25% overlap** represents!
 
 ---
@@ -220,20 +220,20 @@ The high-resolution visualization artifact is saved in [`outputs/first_eval_demo
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ PANEL 1 (TOP): ORIGINAL MIXTURE (controlled_mix_01)                                    │
-│ [0.0s - 3.5s]: Male voice alone (lower pitch harmonics 100-300 Hz)                     │
-│ [3.5s - 4.7s]: CRITICAL OVERLAP REGION: Male formants and Female formants COLLIDE     │
+│ [0.0s - 3.5s]: Female voice alone (higher pitch harmonics 180-350 Hz)                  │
+│ [3.5s - 4.7s]: CRITICAL OVERLAP REGION: Female formants and Male formants COLLIDE      │
 │                into an acoustic cross-hatched grid (unintelligible to ASR)             │
-│ [4.7s - 9.5s]: Female voice alone (higher pitch harmonics 200-500 Hz)                  │
+│ [4.7s - 9.5s]: Male voice alone (lower pitch harmonics 100-200 Hz)                     │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ PANEL 2 (MIDDLE): SEPARATED SPEAKER 0 (MALE HINGLISH)                                  │
-│ • Look at [3.5s - 4.7s]: The female high-frequency formants are completely STRIPPED.  │
-│ • Look at [4.7s - 9.5s]: Clean dark purple SILENCE where the female was talking alone. │
-│ • The male speaker's vocal envelope is preserved with 21.8 dB SI-SDR clarity.          │
+│ PANEL 2 (MIDDLE): SEPARATED SPEAKER 0 (FEMALE HINGLISH)                                │
+│ • Look at [3.5s - 4.7s]: The male low-frequency rumble is completely STRIPPED.         │
+│ • Look at [4.7s - 9.5s]: Clean dark purple SILENCE where the male was talking alone.   │
+│ • The female speaker's vocal envelope is preserved with 21.8 dB SI-SDR clarity.        │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ PANEL 3 (BOTTOM): SEPARATED SPEAKER 1 (FEMALE HINDI)                                   │
-│ • Look at [0.0s - 3.5s]: Clean dark purple SILENCE where the male was talking alone.   │
-│ • Look at [3.5s - 4.7s]: The male voice's low-frequency rumble is completely REMOVED. │
-│ • The female formants shine through with zero cross-talk interference.                 │
+│ PANEL 3 (BOTTOM): SEPARATED SPEAKER 1 (MALE HINDI)                                     │
+│ • Look at [0.0s - 3.5s]: Clean dark purple SILENCE where the female was talking alone. │
+│ • Look at [3.5s - 4.7s]: The female high-frequency formants are completely REMOVED.   │
+│ • The male formants shine through with zero cross-talk interference.                   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 

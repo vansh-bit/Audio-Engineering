@@ -22,8 +22,8 @@
           -19.395
         ],
         "mean_delta_sisdr_db": -9.7,
-        "processing_time_seconds": 11.671,
-        "rtf": 1.224,
+        "processing_time_seconds": 6.037,
+        "rtf": 0.633,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_source_1_residual.wav"
@@ -40,8 +40,8 @@
           19.792
         ],
         "mean_delta_sisdr_db": 21.757,
-        "processing_time_seconds": 0.907,
-        "rtf": 0.095,
+        "processing_time_seconds": 0.847,
+        "rtf": 0.089,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_01_pairAD_ov25_sir0/controlled_mix_01_pairAD_ov25_sir0_speaker_1.wav"
@@ -69,8 +69,8 @@
           -19.471
         ],
         "mean_delta_sisdr_db": -9.738,
-        "processing_time_seconds": 3.458,
-        "rtf": 0.414,
+        "processing_time_seconds": 4.718,
+        "rtf": 0.565,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_02_pairAD_ov50_sir0/controlled_mix_02_pairAD_ov50_sir0_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_02_pairAD_ov50_sir0/controlled_mix_02_pairAD_ov50_sir0_source_1_residual.wav"
@@ -87,8 +87,8 @@
           18.424
         ],
         "mean_delta_sisdr_db": 19.885,
-        "processing_time_seconds": 0.685,
-        "rtf": 0.082,
+        "processing_time_seconds": 0.722,
+        "rtf": 0.086,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_02_pairAD_ov50_sir0/controlled_mix_02_pairAD_ov50_sir0_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_02_pairAD_ov50_sir0/controlled_mix_02_pairAD_ov50_sir0_speaker_1.wav"
@@ -116,8 +116,8 @@
           -19.717
         ],
         "mean_delta_sisdr_db": -9.86,
-        "processing_time_seconds": 3.475,
-        "rtf": 0.416,
+        "processing_time_seconds": 4.526,
+        "rtf": 0.542,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_03_pairAD_ov50_sir6/controlled_mix_03_pairAD_ov50_sir6_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_03_pairAD_ov50_sir6/controlled_mix_03_pairAD_ov50_sir6_source_1_residual.wav"
@@ -134,8 +134,8 @@
           22.514
         ],
         "mean_delta_sisdr_db": 20.272,
-        "processing_time_seconds": 0.496,
-        "rtf": 0.059,
+        "processing_time_seconds": 0.683,
+        "rtf": 0.082,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_03_pairAD_ov50_sir6/controlled_mix_03_pairAD_ov50_sir6_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_03_pairAD_ov50_sir6/controlled_mix_03_pairAD_ov50_sir6_speaker_1.wav"
@@ -163,8 +163,8 @@
           -14.392
         ],
         "mean_delta_sisdr_db": -7.197,
-        "processing_time_seconds": 3.312,
-        "rtf": 0.362,
+        "processing_time_seconds": 4.711,
+        "rtf": 0.515,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_04_pairBC_ov25_sir0/controlled_mix_04_pairBC_ov25_sir0_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_04_pairBC_ov25_sir0/controlled_mix_04_pairBC_ov25_sir0_source_1_residual.wav"
@@ -181,8 +181,8 @@
           5.605
         ],
         "mean_delta_sisdr_db": 4.813,
-        "processing_time_seconds": 0.661,
-        "rtf": 0.072,
+        "processing_time_seconds": 0.788,
+        "rtf": 0.086,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_04_pairBC_ov25_sir0/controlled_mix_04_pairBC_ov25_sir0_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_04_pairBC_ov25_sir0/controlled_mix_04_pairBC_ov25_sir0_speaker_1.wav"
@@ -210,8 +210,8 @@
           -13.856
         ],
         "mean_delta_sisdr_db": -6.93,
-        "processing_time_seconds": 3.401,
-        "rtf": 0.409,
+        "processing_time_seconds": 4.697,
+        "rtf": 0.565,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_05_pairBC_ov50_sir0/controlled_mix_05_pairBC_ov50_sir0_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_05_pairBC_ov50_sir0/controlled_mix_05_pairBC_ov50_sir0_source_1_residual.wav"
@@ -228,8 +228,8 @@
           6.927
         ],
         "mean_delta_sisdr_db": 5.876,
-        "processing_time_seconds": 0.661,
-        "rtf": 0.08,
+        "processing_time_seconds": 0.812,
+        "rtf": 0.098,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_05_pairBC_ov50_sir0/controlled_mix_05_pairBC_ov50_sir0_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_05_pairBC_ov50_sir0/controlled_mix_05_pairBC_ov50_sir0_speaker_1.wav"
@@ -257,8 +257,8 @@
           -16.282
         ],
         "mean_delta_sisdr_db": -8.145,
-        "processing_time_seconds": 3.394,
-        "rtf": 0.409,
+        "processing_time_seconds": 4.555,
+        "rtf": 0.548,
         "separated_stems": [
           "outputs/first_eval_demo/demucs/controlled_mix_06_pairBC_ov50_sir_neg6/controlled_mix_06_pairBC_ov50_sir_neg6_source_0_vocal.wav",
           "outputs/first_eval_demo/demucs/controlled_mix_06_pairBC_ov50_sir_neg6/controlled_mix_06_pairBC_ov50_sir_neg6_source_1_residual.wav"
@@ -275,8 +275,8 @@
           18.494
         ],
         "mean_delta_sisdr_db": 20.105,
-        "processing_time_seconds": 0.499,
-        "rtf": 0.06,
+        "processing_time_seconds": 0.828,
+        "rtf": 0.1,
         "separated_stems": [
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_06_pairBC_ov50_sir_neg6/controlled_mix_06_pairBC_ov50_sir_neg6_speaker_0.wav",
           "outputs/first_eval_demo/conv_tasnet/controlled_mix_06_pairBC_ov50_sir_neg6/controlled_mix_06_pairBC_ov50_sir_neg6_speaker_1.wav"
