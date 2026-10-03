@@ -192,19 +192,20 @@ def main():
     sig_g2 = wav_g.squeeze(0).cpu().numpy()
 
     # Timeline: Host [0.0 - 4.7s], Guest 1 [3.8 - 8.4s] (0.9s overlap), Guest 2 [6.8 - 12.5s] (1.6s overlap)
-    total_panel_samples = int(round(12.5 * 16000))
-    panel_mix = np.zeros(total_panel_samples, dtype=np.float32)
-
     s1_start = 0
     s1_end = s1_start + len(sig_host)
-    panel_mix[s1_start:s1_end] += sig_host
 
     s2_start = int(round(3.8 * 16000))
     s2_end = s2_start + len(sig_g1)
-    panel_mix[s2_start:s2_end] += sig_g1
 
     s3_start = int(round(6.8 * 16000))
     s3_end = s3_start + len(sig_g2)
+
+    total_panel_samples = max(s1_end, s2_end, s3_end) + int(0.5 * 16000)
+    panel_mix = np.zeros(total_panel_samples, dtype=np.float32)
+
+    panel_mix[s1_start:s1_end] += sig_host
+    panel_mix[s2_start:s2_end] += sig_g1
     panel_mix[s3_start:s3_end] += sig_g2
 
     # Add subtle room reverberation & ambient chatter

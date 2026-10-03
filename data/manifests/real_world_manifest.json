@@ -1,0 +1,95 @@
+{
+  "dataset_name": "Indian Speech Real-World In-The-Wild Evaluation Suite (Track B)",
+  "sample_rate_hz": 16000,
+  "format": "16-bit Mono PCM WAV",
+  "total_clips": 3,
+  "clips": [
+    {
+      "clip_id": "air_formal_news_01",
+      "file_path": "data/real_world_eval_suite/air_formal_news_01.wav",
+      "duration_seconds": 6.0,
+      "domain": "formal_studio_news",
+      "speech_style": "formal_read_speech",
+      "primary_language": "Hindi",
+      "num_speakers": 1,
+      "acoustic_environment": "Acoustically treated studio booth, high SNR (>45 dB), zero overlap",
+      "acoustic_metrics": {
+        "duration_seconds": 6.0,
+        "peak_amplitude": 0.7878,
+        "peak_db": -2.07,
+        "rms_energy_db": -18.0,
+        "snr_estimate_db": 47.05
+      },
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_AIR_NEWSREADER",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 6.0,
+          "transcript": "यह एक वॉइस ऑडियो डेटासेट है जिसे आप AI प्रशिक्षण उद्देश्यों के लिए उपयोग कर सकते हैं। प्रत्येक रिकॉर्डिंग को सावधानीपूर्वक तैयार किया गया है ताकि स्पष्ट उच्चारण और मशीन लर्निंग अनुप्रयोगों के लिए स्थिर ऑडियो गुणवत्ता सुनिश्चित की जा सके।"
+        }
+      ]
+    },
+    {
+      "clip_id": "air_spontaneous_panel_01",
+      "file_path": "data/real_world_eval_suite/air_spontaneous_panel_01.wav",
+      "duration_seconds": 13.017,
+      "domain": "spontaneous_panel_debate",
+      "speech_style": "conversational_dialogue_with_interruptions",
+      "primary_language": "Hindi-English (Hinglish)",
+      "num_speakers": 3,
+      "acoustic_environment": "Broadcast studio table microphone, multi-talker cross-talk, dynamic turn-taking",
+      "acoustic_metrics": {
+        "duration_seconds": 13.017,
+        "peak_amplitude": 0.9147,
+        "peak_db": -0.77,
+        "rms_energy_db": -18.53,
+        "snr_estimate_db": 35.6
+      },
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_PANEL_HOST",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 4.715,
+          "transcript": "उन्हें दस दिन तक rehab करना होगा और उसके बाद उनका fitness test लिया जाएगा।"
+        },
+        {
+          "speaker_id": "SPEAKER_PANEL_GUEST_1",
+          "start_time_seconds": 3.8,
+          "end_time_seconds": 8.429,
+          "transcript": "इस योजना के अंतर्गत सभी महिलाओं को विशेष वित्तीय सहायता दी जाएगी।"
+        },
+        {
+          "speaker_id": "SPEAKER_PANEL_GUEST_2",
+          "start_time_seconds": 6.8,
+          "end_time_seconds": 12.517,
+          "transcript": "smartphone में विशेष तौर से इसी काम के लिए बने hardware और software का इस्तेमाल किया गया है।"
+        }
+      ]
+    },
+    {
+      "clip_id": "vaani_rural_call_01",
+      "file_path": "data/real_world_eval_suite/vaani_rural_call_01.wav",
+      "duration_seconds": 8.299,
+      "domain": "rural_agricultural_call",
+      "speech_style": "spontaneous_phone_in_inquiry",
+      "primary_language": "Hinglish (Rural Dialectal Code-Switching)",
+      "num_speakers": 1,
+      "acoustic_environment": "2G/3G mobile cellular channel, 300-3400 Hz bandpass, line noise and background hum (SNR 18 dB)",
+      "acoustic_metrics": {
+        "duration_seconds": 8.299,
+        "peak_amplitude": 0.4392,
+        "peak_db": -7.15,
+        "rms_energy_db": -24.36,
+        "snr_estimate_db": 21.15
+      },
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_RURAL_CALLER",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 8.299,
+          "transcript": "जिसके बाद रूस की तरफ़ जाने वाली non-stop flight के लिए carry bag में कोई भी liquid पदार्थ ले जाने से मना कर दिया गया था।"
+        }
+      ]
+    }
+  ]
+}

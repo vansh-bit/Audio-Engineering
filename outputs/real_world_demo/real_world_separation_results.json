@@ -1,0 +1,248 @@
+{
+  "experiment_name": "Real-World In-The-Wild Indian Audio Separation Stress-Test",
+  "timestamp": "2026-10-03 14:34:23",
+  "total_clips_evaluated": 3,
+  "device_used": "mps",
+  "results": [
+    {
+      "clip_id": "air_formal_news_01",
+      "domain": "formal_studio_news",
+      "speech_style": "formal_read_speech",
+      "duration_seconds": 6.0,
+      "ground_truth_num_speakers": 1,
+      "conv_tasnet": {
+        "inference_time_seconds": 1.377,
+        "rtf": 0.23,
+        "separated_stems": [
+          {
+            "channel": 0,
+            "file_path": "outputs/real_world_demo/conv_tasnet/air_formal_news_01/air_formal_news_01_speaker_0.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 6.0,
+              "peak_amplitude": 48610.0742,
+              "peak_db": 93.73,
+              "rms_energy_db": 77.16,
+              "snr_estimate_db": 55.09
+            }
+          },
+          {
+            "channel": 1,
+            "file_path": "outputs/real_world_demo/conv_tasnet/air_formal_news_01/air_formal_news_01_speaker_1.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 6.0,
+              "peak_amplitude": 35399.6172,
+              "peak_db": 90.98,
+              "rms_energy_db": 66.55,
+              "snr_estimate_db": 45.58
+            }
+          }
+        ]
+      },
+      "demucs": {
+        "inference_time_seconds": 7.984,
+        "rtf": 1.331,
+        "separated_stems": [
+          {
+            "source_index": 0,
+            "label": "source_0_vocal",
+            "file_path": "outputs/real_world_demo/demucs/air_formal_news_01/air_formal_news_01_source_0_vocal.wav",
+            "energy_ratio": 1.0,
+            "metrics": {
+              "duration_seconds": 6.0,
+              "peak_amplitude": 0.7897,
+              "peak_db": -2.05,
+              "rms_energy_db": -18.0,
+              "snr_estimate_db": 46.25
+            }
+          },
+          {
+            "source_index": 1,
+            "label": "source_1_residual",
+            "file_path": "outputs/real_world_demo/demucs/air_formal_news_01/air_formal_news_01_source_1_residual.wav",
+            "energy_ratio": 0.0,
+            "metrics": {
+              "duration_seconds": 6.0,
+              "peak_amplitude": 0.0051,
+              "peak_db": -45.79,
+              "rms_energy_db": -64.79,
+              "snr_estimate_db": 18.68
+            }
+          }
+        ]
+      },
+      "spectrogram_plot": "outputs/real_world_demo/air_formal_news_01_spectrogram_comparison.png",
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_AIR_NEWSREADER",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 6.0,
+          "transcript": "यह एक वॉइस ऑडियो डेटासेट है जिसे आप AI प्रशिक्षण उद्देश्यों के लिए उपयोग कर सकते हैं। प्रत्येक रिकॉर्डिंग को सावधानीपूर्वक तैयार किया गया है ताकि स्पष्ट उच्चारण और मशीन लर्निंग अनुप्रयोगों के लिए स्थिर ऑडियो गुणवत्ता सुनिश्चित की जा सके।"
+        }
+      ]
+    },
+    {
+      "clip_id": "air_spontaneous_panel_01",
+      "domain": "spontaneous_panel_debate",
+      "speech_style": "conversational_dialogue_with_interruptions",
+      "duration_seconds": 13.017,
+      "ground_truth_num_speakers": 3,
+      "conv_tasnet": {
+        "inference_time_seconds": 1.724,
+        "rtf": 0.132,
+        "separated_stems": [
+          {
+            "channel": 0,
+            "file_path": "outputs/real_world_demo/conv_tasnet/air_spontaneous_panel_01/air_spontaneous_panel_01_speaker_0.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 13.017,
+              "peak_amplitude": 55440.0039,
+              "peak_db": 94.88,
+              "rms_energy_db": 74.37,
+              "snr_estimate_db": 49.67
+            }
+          },
+          {
+            "channel": 1,
+            "file_path": "outputs/real_world_demo/conv_tasnet/air_spontaneous_panel_01/air_spontaneous_panel_01_speaker_1.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 13.017,
+              "peak_amplitude": 31057.3477,
+              "peak_db": 89.84,
+              "rms_energy_db": 72.87,
+              "snr_estimate_db": 41.73
+            }
+          }
+        ]
+      },
+      "demucs": {
+        "inference_time_seconds": 8.07,
+        "rtf": 0.62,
+        "separated_stems": [
+          {
+            "source_index": 0,
+            "label": "source_0_vocal",
+            "file_path": "outputs/real_world_demo/demucs/air_spontaneous_panel_01/air_spontaneous_panel_01_source_0_vocal.wav",
+            "energy_ratio": 0.9999,
+            "metrics": {
+              "duration_seconds": 13.017,
+              "peak_amplitude": 0.9196,
+              "peak_db": -0.73,
+              "rms_energy_db": -18.52,
+              "snr_estimate_db": 39.53
+            }
+          },
+          {
+            "source_index": 1,
+            "label": "source_1_residual",
+            "file_path": "outputs/real_world_demo/demucs/air_spontaneous_panel_01/air_spontaneous_panel_01_source_1_residual.wav",
+            "energy_ratio": 0.0001,
+            "metrics": {
+              "duration_seconds": 13.017,
+              "peak_amplitude": 0.0091,
+              "peak_db": -40.83,
+              "rms_energy_db": -60.26,
+              "snr_estimate_db": 7.5
+            }
+          }
+        ]
+      },
+      "spectrogram_plot": "outputs/real_world_demo/air_spontaneous_panel_01_spectrogram_comparison.png",
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_PANEL_HOST",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 4.715,
+          "transcript": "उन्हें दस दिन तक rehab करना होगा और उसके बाद उनका fitness test लिया जाएगा।"
+        },
+        {
+          "speaker_id": "SPEAKER_PANEL_GUEST_1",
+          "start_time_seconds": 3.8,
+          "end_time_seconds": 8.429,
+          "transcript": "इस योजना के अंतर्गत सभी महिलाओं को विशेष वित्तीय सहायता दी जाएगी।"
+        },
+        {
+          "speaker_id": "SPEAKER_PANEL_GUEST_2",
+          "start_time_seconds": 6.8,
+          "end_time_seconds": 12.517,
+          "transcript": "smartphone में विशेष तौर से इसी काम के लिए बने hardware और software का इस्तेमाल किया गया है।"
+        }
+      ]
+    },
+    {
+      "clip_id": "vaani_rural_call_01",
+      "domain": "rural_agricultural_call",
+      "speech_style": "spontaneous_phone_in_inquiry",
+      "duration_seconds": 8.299,
+      "ground_truth_num_speakers": 1,
+      "conv_tasnet": {
+        "inference_time_seconds": 1.281,
+        "rtf": 0.154,
+        "separated_stems": [
+          {
+            "channel": 0,
+            "file_path": "outputs/real_world_demo/conv_tasnet/vaani_rural_call_01/vaani_rural_call_01_speaker_0.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 8.299,
+              "peak_amplitude": 14686.8818,
+              "peak_db": 83.34,
+              "rms_energy_db": 63.06,
+              "snr_estimate_db": 24.49
+            }
+          },
+          {
+            "channel": 1,
+            "file_path": "outputs/real_world_demo/conv_tasnet/vaani_rural_call_01/vaani_rural_call_01_speaker_1.wav",
+            "acoustic_metrics": {
+              "duration_seconds": 8.299,
+              "peak_amplitude": 23215.0898,
+              "peak_db": 87.32,
+              "rms_energy_db": 69.87,
+              "snr_estimate_db": 32.12
+            }
+          }
+        ]
+      },
+      "demucs": {
+        "inference_time_seconds": 4.734,
+        "rtf": 0.57,
+        "separated_stems": [
+          {
+            "source_index": 0,
+            "label": "source_0_vocal",
+            "file_path": "outputs/real_world_demo/demucs/vaani_rural_call_01/vaani_rural_call_01_source_0_vocal.wav",
+            "energy_ratio": 0.9945,
+            "metrics": {
+              "duration_seconds": 8.299,
+              "peak_amplitude": 0.4352,
+              "peak_db": -7.23,
+              "rms_energy_db": -24.43,
+              "snr_estimate_db": 38.91
+            }
+          },
+          {
+            "source_index": 1,
+            "label": "source_1_residual",
+            "file_path": "outputs/real_world_demo/demucs/vaani_rural_call_01/vaani_rural_call_01_source_1_residual.wav",
+            "energy_ratio": 0.0055,
+            "metrics": {
+              "duration_seconds": 8.299,
+              "peak_amplitude": 0.025,
+              "peak_db": -32.03,
+              "rms_energy_db": -47.04,
+              "snr_estimate_db": 4.05
+            }
+          }
+        ]
+      },
+      "spectrogram_plot": "outputs/real_world_demo/vaani_rural_call_01_spectrogram_comparison.png",
+      "speaker_turns": [
+        {
+          "speaker_id": "SPEAKER_RURAL_CALLER",
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 8.299,
+          "transcript": "जिसके बाद रूस की तरफ़ जाने वाली non-stop flight के लिए carry bag में कोई भी liquid पदार्थ ले जाने से मना कर दिया गया था।"
+        }
+      ]
+    }
+  ]
+}
